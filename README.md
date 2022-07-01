@@ -1,7 +1,5 @@
-# 1st Project for the Introduction to Computer Graphics class 2021/2022
+# 2nd Project for the Introduction to Computer Graphics class 2021/2022
 
-#### **1st ICG Project using *three.js***
+Continuation and Improvement of the [First ICG Project](https://github.com/DXOGO/little-town_ICG) 
 
-Development of a 3D application demonstrating the modeling and animation of objects, and the use of illumination in a scenario of choice, with interactivity/control by the user
-
-Project running on: https://dxogo.github.io/big-town_ICG/
+Project running on: *to be deployed*
