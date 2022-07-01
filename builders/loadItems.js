@@ -14,7 +14,7 @@ function createTree(posx) {
       function ( gltf ) {
         gltf.scene.scale.set(80,80,80)
         gltf.scene.position.set(posx, 0, -1000+getRandomNumberBetween(-50,50))
-  
+
         gltf.scene.traverse(function (child) {
   
           if (child instanceof THREE.Mesh) {
@@ -89,7 +89,7 @@ function createBench(x, z) {
         'models/bench/scene.gltf',
         // called when the resource is loaded
         function ( gltf ) {
-        gltf.scene.scale.set(100,100,100)
+        gltf.scene.scale.set(110,110,110)
         gltf.scene.position.set(x, 0, z)
 
         gltf.scene.traverse(function (child) {
@@ -258,7 +258,7 @@ function createBusStop() {
             gltf.scene.traverse(function (child) {
 
                 if (child instanceof THREE.Mesh) {
-                    child.material = new THREE.MeshStandardMaterial({color: 0xffffff, opacity: 0.5})
+                    child.material = new THREE.MeshPhongMaterial({color: 0xffffff, opacity: 0.5})
                     child.castShadow = true;
                     child.receiveShadow = true;
                 }
@@ -300,7 +300,7 @@ function createBus() {
             gltf.scene.traverse(function (child) {
 
                 if (child instanceof THREE.Mesh) {
-                    //child.material = new THREE.MeshStandardMaterial({color: 0xffffff, opacity: 0.5})
+                    //child.material = new THREE.MeshPhongMaterial({color: 0xffffff, opacity: 0.5})
                     child.castShadow = true;
                     child.receiveShadow = true;
                 }
@@ -383,7 +383,7 @@ function createBridge() {
             gltf.scene.traverse(function (child) {
 
                 if (child instanceof THREE.Mesh) {
-                    child.material = new THREE.MeshStandardMaterial({color: 0xff9e54})
+                    child.material = new THREE.MeshPhongMaterial({color: 0xff9e54})
                     child.castShadow = true;
                     child.receiveShadow = true;
                 }
@@ -400,7 +400,7 @@ function createBridge() {
         console.log( ' An error happened' +  error );
         }
     );
-    const floor = new THREE.Mesh(new THREE.BoxBufferGeometry(200, 400, 15), new THREE.MeshStandardMaterial({color: 0xff9e54}))
+    const floor = new THREE.Mesh(new THREE.BoxBufferGeometry(200, 400, 15), new THREE.MeshPhongMaterial({color: 0xff9e54}))
     floor.rotateOnAxis(new THREE.Vector3(1, 0, 0), Math.PI / 2);
     floor.position.set(-1200, 0, -500)
     group.add(floor)
@@ -428,7 +428,7 @@ function createOtherStatue() {
             gltf.scene.traverse(function (child) {
 
                 if (child instanceof THREE.Mesh) {
-                    child.material = new THREE.MeshStandardMaterial({color: 0xffffff})
+                    child.material = new THREE.MeshPhongMaterial({color: 0xffffff})
                     child.castShadow = true;
                     child.receiveShadow = true;
                 }
@@ -488,7 +488,7 @@ function createAirPlane() {
         }
     );
 
-    const helice = new THREE.Mesh(new THREE.BoxBufferGeometry(2, 115, 8), new THREE.MeshStandardMaterial({color: 0xffffff}))
+    const helice = new THREE.Mesh(new THREE.BoxBufferGeometry(2, 115, 8), new THREE.MeshPhongMaterial({color: 0xffffff}))
     helice.position.set(-300, 1775, -1500)
     helice.name = 'helice'
     group.add(helice)
@@ -636,9 +636,9 @@ function createShop2() {
         'models/shop2/scene.gltf',
         // called when the resource is loaded
         function ( gltf ) {
-            gltf.scene.scale.set(100,100,100)
+            gltf.scene.scale.set(160,100,160)
             gltf.scene.rotation.y = Math.PI
-            gltf.scene.position.set(450, 0, 1600)
+            gltf.scene.position.set(550, 0, 2050)
 
             gltf.scene.traverse(function (child) {
             

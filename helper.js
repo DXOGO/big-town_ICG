@@ -15,10 +15,9 @@ const helper = {
         // ************************** //
         // Add Perpective camera
         // ************************** //
-        const camera = new THREE.PerspectiveCamera(45, width / height, 5, 10000);
+        const camera = new THREE.PerspectiveCamera(45, width / height, 10, 10000);
         sceneElements.camera = camera;
-        camera.position.set(-3100, 1400, 0);
-        camera.lookAt(0,0,0)
+        camera.position.set(-3500, 2500, 0);
 
         // ************************** //
         // Illumination
@@ -27,13 +26,13 @@ const helper = {
         // ************************** //
         // Add ambient light
         // ************************** //
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.25);
         sceneElements.sceneGraph.add(ambientLight);
 
         // ***************************** //
         // Add spotlight (with shadows)
         // ***************************** //
-        const sunLight = new THREE.SpotLight(0xffffff, 1, 5000, 2);
+        const sunLight = new THREE.SpotLight(0xffffff, 1.5, 6000, Math.PI / 2.5);
         sunLight.position.set(0, 2800, 0);
         sceneElements.sceneGraph.add(sunLight);
 
@@ -61,7 +60,6 @@ const helper = {
         const renderer = new THREE.WebGLRenderer({ antialias: true });
         sceneElements.renderer = renderer;
         renderer.setPixelRatio(window.devicePixelRatio);
-        renderer.setClearColor('lightblue', 1.0);
         renderer.setSize(width, height);
 
         // Setup shadowMap property
