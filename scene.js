@@ -98,7 +98,7 @@ function load3DObjects(sceneGraph) {
     sceneGraph.add(createRoad(3200, 150, -200, 0));
     sceneGraph.add(createRoad(150, 1950, 150, -1025));
     sceneGraph.add(createRoad(150, 1950, 150, 1025));
-    /* sceneGraph.add(createBusStop()) */
+    sceneGraph.add(createBusStop())
     sceneGraph.add(createCrossWalk());
 
     const othercross = createCrossWalk();
