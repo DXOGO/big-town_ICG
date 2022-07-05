@@ -37,41 +37,6 @@ function createTree(posx) {
     return group;
 }  
   
-  // ROCK model from https://github.com/marcaaron/threejs-rock
-function createRock(){
-    var texture = new THREE.TextureLoader().load( 'resources/rock.jpg' );
-    var loader = new THREE.OBJLoader();
-
-    const group = new THREE.Group();
-
-    loader.load(
-        // resource URL
-        'models/rock.obj',
-        // called when resource is loaded
-        function ( object ) {
-            object.scale.set(1.2,1.2,1.2)
-            object.position.set(-1450, 50, -1500)
-            object.traverse(function (child) {
-
-                if (child instanceof THREE.Mesh) {
-                    child.material.map = texture;
-                    child.castShadow = true;
-                    child.receiveShadow = true;
-                }
-            });
-            group.add( object);
-        },
-        function ( xhr ) {
-            console.log( 'Rock ' +( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-        },
-        // called when loading has errors
-        function ( error ) {
-            console.log( ' An error happened' +  error );
-        }
-    );
-
-    return group;
-}
 /*  NEW FOR PROJECT 2 */
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // BENCH

@@ -98,7 +98,7 @@ function load3DObjects(sceneGraph) {
     sceneGraph.add(createRoad(3200, 150, -200, 0));
     sceneGraph.add(createRoad(150, 1950, 150, -1025));
     sceneGraph.add(createRoad(150, 1950, 150, 1025));
-    /* sceneGraph.add(createBusStop()) */
+    sceneGraph.add(createBusStop())
     sceneGraph.add(createCrossWalk());
 
     const othercross = createCrossWalk();
@@ -190,10 +190,7 @@ function load3DObjects(sceneGraph) {
     const lst = createOtherStatue();
     lst.rotation.y = Math.PI / 3
     lst.position.set(-850, 0, -720)
-    sceneGraph.add(lst);
-
-   // sceneGraph.add(createRock());
-  
+    sceneGraph.add(lst);  
 
     // ************************** //
     // Create sun and moon
@@ -241,11 +238,11 @@ for ( let i = 0; i < 80000; i ++ ) {
 let carPOV = false;
 let clicks = 0;
   
-  let btn = document.querySelector('#carpov');
-  btn.addEventListener('click',function(event) {
-    clicks++;
-    if (clicks % 2 != 0) { carPOV = true; } else {  carPOV = false; }
-  });
+//   let btn = document.querySelector('#carpov');
+//   btn.addEventListener('click',function(event) {
+//     clicks++;
+//     if (clicks % 2 != 0) { carPOV = true; } else {  carPOV = false; }
+//   });
 
 // stars
 const geometry = new THREE.BufferGeometry();
