@@ -238,11 +238,16 @@ for ( let i = 0; i < 80000; i ++ ) {
 let carPOV = false;
 let clicks = 0;
   
-//   let btn = document.querySelector('#carpov');
-//   btn.addEventListener('click',function(event) {
-//     clicks++;
-//     if (clicks % 2 != 0) { carPOV = true; } else {  carPOV = false; }
-//   });
+  let btn = document.querySelector('#carpov');
+  btn.addEventListener('click',function(event) {
+    clicks++;
+    if (clicks % 2 != 0) { carPOV = true; } 
+    else { 
+        sceneElements.camera.position.set(-3500, 2500, 0); 
+        sceneElements.camera.lookAt(0,0,0);
+        carPOV = false; 
+    }
+  });
 
 // stars
 const geometry = new THREE.BufferGeometry();
